@@ -6,7 +6,7 @@ require('dotenv').config();
 
 exports.crearUsuario = async (req, res) => {
     try {
-        const newHash = await bcryptjs.hash(req.body.password, 10)
+        const newHash = await bcryptjs.hash(req.body.password, 3)
 
         User.create({
             name: req.body.name,

@@ -19,8 +19,7 @@ exports.autenticarUsuario = async (req, res) => {
         if(!user) {
             return res.status(400).json({ msg: 'El usuario no existe' })
         }
-
-        // no esta validando el bcrypt ! 
+        
         const correctPass = await bcryptjs.compare(req.body.password, user.password)
 
         if(!correctPass) {
