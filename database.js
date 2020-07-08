@@ -2,7 +2,6 @@ var Sequelize = require('sequelize');
 
 const UserModel = require('./models/User')
 
-
 const sequelize = new Sequelize(
   'losdosca_secuencize_passport',
   'losdosca_usr01',
@@ -24,5 +23,3 @@ sequelize.sync({ force: false })
 module.exports = {
   User
 }
-
-//module.exports = sequelize;
