@@ -5,11 +5,10 @@ const { check } = require('express-validator')
 
 
 // api/auth
-router.get('/',
-
+router.post('/',
     [
-        check('email', "Agregar un email valido").isEmail(),
-        check('password', 'El password debe tener un minimo de 6 caracteres').length({ min: 6 })
+       check('email', "Agregar un email valido").isEmail(),
+       check('password', 'El password debe tener un minimo de 6 caracteres').not().isEmpty()
     ],
     authController.autenticarUsuario
 )
