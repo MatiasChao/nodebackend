@@ -4,10 +4,14 @@ Para crear un usuario de prueba:
 
 POST: http://localhost:4000/api/users
 body: {
-	"name": "Matias",
-	"email": "matias@hotmail.com",
+	"name": "DLocal",
+	"email": "hello@dlocal.com",
 	"password": "12345"
 }
+
+Usuario de ejemplo:
+User: test@dlocal.com
+Pass: 12345
 
 // si no encuentra la tabla users en la BD la va a crear.
 // la info para la base de datos está en la carpeta raiz del proyecto ./database.js
